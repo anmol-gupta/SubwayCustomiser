@@ -2,7 +2,8 @@ import React from "react";
 import classes from "./Sub.css";
 import SubIngredient from "../Sub/SubIngredients/SubIngredient";
 const sub = props => {
-  let transfomedIngredients = Object.keys(props.ingredients)
+  
+    let transfomedIngredients = Object.keys(props.ingredients)
     .map(igKey => {
       return [...Array(props.ingredients[igKey])].map((_, i) => {
         return <SubIngredient type={igKey} key={igKey + i} />;
